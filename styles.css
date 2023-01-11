@@ -1,0 +1,50 @@
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+footer{
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    align-self: flex-end;
+}
+main{
+    padding-top: 30px;
+    
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    height: 30px;
+    background-color: red;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+.navbar p{
+    margin: 0;
+}
+.navbar-container{
+
+    height: max-content;
+
+}
+
+
+/*
+@media screen and (max-width: 991px){
+
+}
+
+@media screen and (max-width: 767px){
+
+}
+
+@media screen and (max-width: 479px){
+
+}
+*/
