@@ -1,50 +1,182 @@
-body{
-    min-height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+* {
     box-sizing: border-box;
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
 }
-footer{
-    width: 100%;
-    text-align: center;
-    bottom: 0;
-    align-self: flex-end;
+
+:root {
+    --main-green: #2eb82e;
+    --main-black: #242424;
+    --border-white: #edfaff;
+    --nav-color: #000000;
 }
-main{
-    padding-top: 30px;
-    
+body {
+    background-color: var(--main-black);
 }
-.navbar{
-    position: fixed;
-    top: 0;
-    height: 30px;
-    background-color: red;
-    width: 100%;
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-bar {
+    height: 80px;
+    background-color: var(--nav-color);
     display: flex;
-    flex-direction:row;
+    align-items: center;
+    padding: 0 48px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav-container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+}
+
+.logo-container {
+    max-height: 100%;
+}
+
+.logo {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.nav-buttons-container {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: space-around;
+}
+
+.landing {
+    position: relative;
+    height: 100vh;
+}
+.landing-img-container {
+    background-size: cover;
+    background-image: url(./assets/krzysztof-hepner-ymx8g15pxD4-unsplash.jpg);
+    background-repeat: no-repeat;
+    opacity: 0.64;
+    box-shadow: 200px 200px 200px rgba(0, 0, 0, 1) inset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation-name: landing-breath;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.landing-container {
+    width: 100%;
+    font-size: 22px;
+    position: relative ;
+    top: 80px;
+    left: 0;
+    display: flex;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    color: white;
+    padding: 30px;
     align-items: center;
 }
-.navbar p{
-    margin: 0;
-}
-.navbar-container{
 
-    height: max-content;
-
+.landing-content-container {
+    flex-basis: 70%;
+    height: 100%;
 }
 
-
-/*
-@media screen and (max-width: 991px){
-
+.landing-icon-container {
+    flex-basis: 40%;
+    height: 100%;
 }
 
-@media screen and (max-width: 767px){
-
+.landing-title-container {
+    width: 100%;
+}
+.landing-icon-container {
+    /* padding: 80px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.landing-icon {
+    width: 360px;
+    max-width: 70%;
+    min-width: 80px;
 }
 
-@media screen and (max-width: 479px){
-
+.landing-text {
+    min-width: 24px;
 }
-*/
+
+.landing-title {
+    font-size: 10vw;
+}
+.landing-register-container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.landing-register-link {
+    text-decoration: none;
+}
+.landing-register-btn {
+    width: 200px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s;
+}
+
+.landing-register-btn:hover {
+    color: white;
+    background-color: #35768f;
+}
+
+.page-container{
+    background-image: linear-gradient(115deg, rgb(10, 0, 15) 30%, rgb(14, 0, 18) 70%);
+}
+
+@keyframes landing-breath {
+    0% {
+        box-shadow: 0 0 300px rgba(0, 0, 0, 1) inset;
+    }
+    50% {
+        box-shadow: 0 0 300px rgba(0, 0, 0, 0.2) inset;
+    }
+    100% {
+        box-shadow: 0 0 300px rgba(0, 0, 0, 1) inset;
+    }
+}
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 479px) {
+}
