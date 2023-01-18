@@ -178,8 +178,179 @@ body {
     display: none;
 }
 main{
-    background-image: linear-gradient(115deg, rgb(10, 0, 12) 10%, rgb(16, 0, 9) 90%);
     min-height: 100vh;
+    background-color: #0F000F;
+}
+
+.about{
+    color:white;
+    width: 100%;
+}
+
+.about-container{
+    padding: 48px;
+}
+
+.about-container h2 {
+
+    font-family: "SF Pro Display", "Inter", system-ui, sans-serif;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+}
+
+
+.about-table{
+    display: flex;
+    flex-direction: row;
+    border:2px solid white;
+    justify-content: space-between;
+    align-items: stretch;
+    border-radius: 48px;
+}
+.about-column{
+    border-style: solid;
+    border-width: 0px 2px 0px 0px;
+    border-color: white;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 12px 18px 12px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.about-column:last-child{
+    border-width: 0;
+}
+
+.about-column p {
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #B0C1E1;
+
+}
+
+.about-column li {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #B0C1E1;
+    list-style: none;
+}
+.about-column li:before {
+    font-size: 1.4em;
+    content: '✓';
+    padding: 0 2px;
+
+}
+
+.number-tag {
+
+
+    font-weight: 500;
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    font-size: 24px;
+    line-height: 32px;
+    background: linear-gradient(127deg, rgba(54, 11, 189, 1) 0%, rgba(19, 12, 139, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.place-title{
+    text-align:center; 
+    font-size: 36px; 
+    margin-top:72px; 
+    margin-bottom:32px;
+}
+
+.place-content{
+    text-align:center;
+    font-size: 24px; 
+    line-height: 24px;
+}
+
+.team{
+    color:white;
+}
+.team-container{
+    padding:48px 72px 48px 72px;
+}
+.team-table{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 36px;
+}
+.card-container{
+    border:4px solid white;
+    border-radius: 12px;
+    flex-grow: 1;
+    max-width: 300px;
+}
+.contacts-container{
+    display: flex;
+    flex-direction: row;
+
+}
+.contact-card{
+    border-width: 2px 2px 0px 0px;
+    border-color:white;
+    border-style:solid;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+.person-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 12px 24px 12px;
+
+}
+.person-image-container{
+    padding: 4px;
+    width: 96px;
+    height: 96px;
+    border: 1px solid #E6EBF5;
+    border-radius: 134px;
+    overflow: hidden;
+}
+.person-info-container{
+    text-align: center;
+}
+.person-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.contact-image a {
+    display: flex;
+    align-items: center;
+}
+
+.contact-card:last-child{
+    border-width: 2px 0px 0px 0px;
+}
+.contact-image-container{
+    margin:18px 12px 18px 12px;
+    width: 48px;
+    height: 48px;
+}
+
+.contact-image{
+    width: 100%;
+    height: 100%x;
+
 }
 
 @keyframes landing-breath {
@@ -195,9 +366,38 @@ main{
 }
 
 @media screen and (max-width: 991px) {
+    .team-table{
+        flex-direction: row;
+        gap: 72px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .person-container{
+        min-width: 240px;
+    }
+    .person-image-container{
+        width: 128px;
+        height: 128px;
+    }
+    .team-table{
+        gap:56px;
+    }
+    .contact-image{
+        /*padding-top: 36px;
+        padding-bottom: 36px;*/
+    }
 }
 
 @media screen and (max-width: 767px) {
+    .card-container{
+        max-width: 240px;
+    }
+    .about-table{
+        flex-direction: column;
+    }
+    .about-column{
+        border-width: 0px 0px 2px 0px;
+    }
     .landing-text {
         font-size: 16px;
     }
@@ -298,6 +498,13 @@ main{
 
     .landing-register-container {
         margin-top: 32px;
+    }
+    .person-image-container{
+        width: 84px;
+        height: 84px;
+    }
+    .person-container{
+        min-width: 180px;
     }
 }
 
