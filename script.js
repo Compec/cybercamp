@@ -15,9 +15,9 @@ document.body.addEventListener('click', (event) => {
             if(card.lastElementChild.classList.contains("answer-open") && card.lastElementChild!=event.target.parentElement.lastElementChild){
                 card.lastElementChild.classList.toggle("answer-open")
             }
-        }
-        if (event.target.parentElement.classList.contains('faq-card')) {
-            event.target.parentElement.lastElementChild.classList.toggle("answer-open")
+            if (event.target.parentElement.classList.contains('faq-card')) {
+                event.target.parentElement.lastElementChild.classList.toggle("answer-open")
+            }
         }
     
     
