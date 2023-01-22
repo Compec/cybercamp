@@ -78,10 +78,12 @@ body.others{
 
 .nav-container {
     width: 100%;
+    margin: auto;
+    max-width: 1280px;
     height: 60px;
     display: flex;
     justify-content: space-between;
-    padding-right: 80px;
+    padding-right: 40px;
 }
 
 .logo-container {
@@ -105,7 +107,7 @@ body.others{
 
 .landing {
     position: relative;
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     padding-top: 80px;
     background: none;
     
@@ -128,7 +130,11 @@ body.others{
 
 .landing-container {
     width: 100%;
+    margin: auto;
+    max-width: 1280px;
     font-size: 22px;
+    margin: auto;
+    max-width: 1280px;
     position: relative;
     top: 0px;
     left: 0;
@@ -144,6 +150,7 @@ body.others{
 
 .landing-content-container {
     flex-basis: 70%;
+    
     height: 100%;
 }
 
@@ -172,7 +179,7 @@ body.others{
 }
 
 .landing-title {
-    font-size: 10vw;
+    font-size: 72px;
 }
 
 .landing-register-container {
@@ -242,6 +249,9 @@ footer{
 
 .about-container{
     padding: 48px;
+    margin: auto;
+    max-width: 1280px;
+    width: 100%;
 }
 
 .about-container h2 {
@@ -340,6 +350,8 @@ footer{
 }
 .team-container{
     padding:48px 72px 48px 72px;
+    margin: auto;
+    max-width: 1280px;
 }
 .team-table{
     display:flex;
@@ -424,6 +436,9 @@ footer{
 .mail-list-container{
     display: flex;
     flex-direction: row;
+    margin: auto;
+    max-width: 1280px;
+    width: 100%;
     padding: 36px 72px 36px 72px;
     gap:64px;
 }
