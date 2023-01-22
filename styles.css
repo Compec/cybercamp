@@ -53,13 +53,14 @@ body.others{
     color: white;
     font-size: 20px;
     font-weight: 600;
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
     transition-property: all;
-    line-height: 130%;
+    white-space: nowrap;
+    transition-timing-function: cubic-bezier(0.16, 0.96, 0.32, 0.96)
 }
 .nav-link:hover {
     color:#1cca1c;
-    font-size: 22px;
+    transform: scale(1.1)
 }
 
 .nav-bar {
@@ -98,8 +99,8 @@ body.others{
 .nav-buttons-container {
     display: flex;
     align-items: center;
-    width: 400px;
-    justify-content: space-around;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .landing {
@@ -503,10 +504,10 @@ footer{
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 24px 0px;
+    gap: 24px;
     border-radius: 30px;
     overflow: hidden;
-    padding-top: 12px;
-    padding-bottom: 12px;
     background-color: #310031;
 }
 .faq-seperator{
@@ -541,7 +542,7 @@ footer{
     
 }
 .answer-open{
-    max-height:120px;
+    max-height: 16px;
 }
 
 .program{
