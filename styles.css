@@ -12,11 +12,11 @@
     --light-blue:rgb(53, 171, 204);
     --blue:rgb(0, 22, 103);
     --dark-blue:rgb(0, 7, 34);
-    --nav-color: black;
+    --nav-color: rgba(0,0,0,0.8);
 }
 body.landing {
     
-    background: linear-gradient(-45deg, var(--pink), var(--blue), var(--dark-blue), var(--purple));
+    background: linear-gradient(-45deg, var(--pink),var(--pink),var(--dark-blue),var(--purple),var(--blue),var(--blue));
 	background-size: 2000% 2000%;
 	animation: gradient 16s ease infinite;
 
@@ -66,6 +66,7 @@ body.others{
 .nav-bar {
     height: 80px;
     background-color: var(--nav-color);
+    backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
     padding: 0 48px;
@@ -78,8 +79,8 @@ body.others{
 
 .nav-container {
     width: 100%;
-    margin: auto;
-    max-width: 1280px;
+    /*margin: auto;
+    max-width: 1280px;*/
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -207,9 +208,10 @@ body.others{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: var(--pink);
+    font-weight: 600;
     border-radius: 300px;
-    transition-property: font-size;
+    transition-property: all;
     transition-duration: 0.3s;
     /*transition: all 0.1s;*/
 }
@@ -222,7 +224,7 @@ body.others{
     */
     background-color: var(--pink);
     color: white;
-    font-size: 120%;
+    transform: scale(1.1);
 }
 
 .hamburger-container {
@@ -231,10 +233,12 @@ body.others{
 .close-hamburger-btn{
     display: none;
 }
+/*
 main{
     
-    /*background-color: #0F000F;*/
+    background-color: #0F000F;
 }
+*/
 footer{
     /*background-color: #0F000F;*/
     color: white;
@@ -268,7 +272,7 @@ footer{
 .about-table{
     display: flex;
     flex-direction: row;
-    border:2px solid white;
+    border:2px solid rgb(255,255,255,0.4);;
     justify-content: space-between;
     align-items: stretch;
     border-radius: 48px;
@@ -276,7 +280,7 @@ footer{
 .about-column{
     border-style: solid;
     border-width: 0px 2px 0px 0px;
-    border-color: white;
+    border-color: rgb(255,255,255,0.4);;
     flex-shrink: 1;
     flex-grow: 1;
     flex-basis: 0;
@@ -360,7 +364,7 @@ footer{
     gap: 36px;
 }
 .card-container{
-    border:4px solid white;
+    border:2px solid rgb(255,255,255,0.4);;
     border-radius: 12px;
     flex-grow: 1;
     overflow: hidden;
@@ -375,7 +379,7 @@ footer{
 }
 .contact-card{
     border-width: 2px 2px 0px 0px;
-    border-color:white;
+    border-color:rgb(255,255,255,0.4);
     border-style:solid;
     flex-basis: 100%;
     display: flex;
@@ -450,7 +454,9 @@ footer{
 }
 .mail-icon{
     width: 100%;
+    opacity: 0.9;
 }
+
 .mail-list-title{
     text-align: center;
     font-size: 32px;
@@ -459,33 +465,64 @@ footer{
 
 .mail-form-container{
     flex-grow: 1;
-
+    height: auto;
 }
 .mail-form{
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height:auto;
     gap: 32px;
-    justify-content: space-around;
+    /*justify-content: space-between;*/
+
 }
 
 .mail-form-title{
     text-align: center;
     font-size: 16px;
 }
+
 .mail-form-input-button{
     width: 20%;
     height: 54px;
     border-radius: 999px;
     min-width: 160px;
     cursor: pointer;
+    font-weight: 600;
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition-property: all;
+    transition-duration: 0.3s;
 }
+.blue-neon{
+    color:var(--light-blue);
+    box-sizing: content-box;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.blue-neon:hover{
+    background-color: var(--light-blue);
+    color: white;
+    border:3px solid white;
+    box-shadow: 0px 0px 10px 6px var(--light-blue);
+    transform: scale(1.1);
+}
+
 .mail-form-input-box{
     height: 64px;
     border-radius: 24px;
     padding-left: 24px;
-    font-size: 18px;
+    font-size: 16px;
     width: 100%;
+    box-sizing: border-box;
+    transition-property: all;
+    transition-duration: 0.3s;
+    border: none;
+}
+.mail-form-input-box:focus{
+    box-shadow: 0px 0px 10px 6px var(--light-blue);
+    border: 2px solid var(--light-blue);
 }
 .input-button-container{
     display: flex;
@@ -631,6 +668,9 @@ footer{
 }
 
 @media screen and (max-width: 991px) {
+    .mail-form-input-button{
+        height:48px;
+    }
     .mail-list-container{
         padding-left: 56px;
         padding-right: 56px;
@@ -677,6 +717,9 @@ footer{
 }
 
 @media screen and (max-width: 767px) {
+    .mail-form-input-button{
+        height:36px;
+    }
     .mail-list-container{
         padding-left: 32px;
         padding-right: 32px;
@@ -802,6 +845,9 @@ footer{
 }
 
 @media screen and (max-width: 479px) {
+    .mail-form-input-button{
+        height:24px;
+    }
     .mail-list-container{
         padding-left: 24px;
         padding-right: 24px;

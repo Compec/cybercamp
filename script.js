@@ -19,6 +19,4 @@ document.body.addEventListener('click', (event) => {
                 event.target.parentElement.lastElementChild.classList.toggle("answer-open")
             }
         }
-    
-    
 });
