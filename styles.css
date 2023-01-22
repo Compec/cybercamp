@@ -471,17 +471,21 @@ footer{
     display: flex;
     flex-direction: column;
     height:auto;
-    gap: 32px;
+    /*gap: 32px;*/
     /*justify-content: space-between;*/
 
 }
-
+.mail-form p{
+    margin-top:16px;
+    margin-bottom: 16px;
+}
 .mail-form-title{
     text-align: center;
     font-size: 16px;
 }
 
 .mail-form-input-button{
+    
     width: 20%;
     height: 54px;
     border-radius: 999px;
@@ -602,19 +606,38 @@ footer{
     color: white;
 }
 .program-container{
+    padding-top:64px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap:72px
 }
 .program-column{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap:56px;
 }
 .slot-details{
     display: flex;
+}
+.slot-container{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    border:2px solid rgb(255,255,255,0.6);
+
+}
+.slot-seperator{
+    height: 1px;
+    width: calc(100% + 4px);
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: rgb(255,255,255,0.6);
+    margin-left: -2px;
+    margin-right: -2px;
 }
 .slot-detail-element{
     display: flex;
@@ -677,7 +700,7 @@ footer{
         gap:48px;
     }
     .mail-form{
-        gap:24px;
+        /*gap:24px;*/
     }
     .mail-form-input-box{
         height:48px;
@@ -726,7 +749,7 @@ footer{
         gap:32px;
     }
     .mail-form{
-        gap:16px;
+        /*gap:16px;*/
     }
     .mail-form-input-box{
         height:36px;
@@ -856,7 +879,7 @@ footer{
         align-items: center;
     }
     .mail-form{
-        gap:12px;
+        /*gap:12px;*/
         padding-left: 32px;
         padding-right: 32px;
     }
