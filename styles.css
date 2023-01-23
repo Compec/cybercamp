@@ -19,6 +19,8 @@
 }
 body{
     padding-top:80px;
+    background: red;
+    background-color: red;
 }
 body.landing-body {
     
@@ -52,6 +54,7 @@ body.others-body{
     color: white;
     border:3px solid white;
     box-shadow: 0px 0px 10px 6px var(--pink);
+    transform: scale(1.1);
 }
 
 .footer-container{
@@ -66,13 +69,25 @@ body.others-body{
     transition-duration: 0.5s;
     transition-property: all;
     white-space: nowrap;
-    transition-timing-function: cubic-bezier(0.16, 0.96, 0.32, 0.96)
+    transition-timing-function: cubic-bezier(0.16, 0.96, 0.32, 0.96);
 }
 .nav-link:hover {
     color:#1cca1c;
     transform: scale(1.1)
 }
-
+.svg-white{
+    fill:white;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.16, 0.96, 0.32, 0.96);
+}
+.nav-link:hover .svg-white{
+    fill:#1cca1c;
+}
+.nav-register{
+    display: flex;
+    align-items: center;
+}
 .nav-bar {
     height: 80px;
     background-color: var(--nav-color);
@@ -125,7 +140,7 @@ body.others-body{
 }
 .landing-img-container {
     background-size: cover;
-    background-image: url(./assets/krzysztof-hepner-ymx8g15pxD4-unsplash.jpg);
+    background-image: url(./assets/krzysztof-hepner-ymx8g15pxD4-unsplash.webp);
     background-repeat: no-repeat;
     opacity: 0.64;
     box-shadow: 200px 200px 200px rgba(0, 0, 0, 1) inset;
@@ -141,8 +156,6 @@ body.others-body{
 
 .landing-container {
     width: 100%;
-    margin: auto;
-    max-width: 1280px;
     font-size: 22px;
     margin: auto;
     max-width: 1280px;
@@ -224,6 +237,7 @@ body.others-body{
     transition-property: all;
     transition-duration: 0.3s;
     /*transition: all 0.1s;*/
+    box-sizing: content-box;
 }
 .landing-register-btn:hover {
     /*
@@ -506,7 +520,7 @@ footer{
     margin-top: auto;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    box-sizing: content-box;
     transition-property: all;
     transition-duration: 0.3s;
 }
@@ -572,10 +586,10 @@ footer{
     flex-direction: column;
     width: 100%;
     padding: 24px 0px;
-    gap: 24px;
+    /*gap: 24px;*/
     border-radius: 30px;
     overflow: hidden;
-    background-color: #310031;
+    /*background-color: #310031;*/
 }
 .faq-seperator{
     width: 100%;
@@ -590,31 +604,42 @@ footer{
 .faq-q{
     background-color: #310031;
     cursor: pointer;
-    padding-left: 18px;
-    padding-right: 18px;
     font-size: 18px;
     height: max-content;
+    overflow: hidden;
+    padding:18px;
 }
-
+.faq-card:first-child{
+    border-radius: 30px 30px 0px 0px;
+}
+.faq-card:last-child{
+    border-radius: 0px 0px 30px 30px;
+}
 .faq-a{
     background-color: #6b163c;
     max-height: 0px;
-    transition-property: max-height;
+    transition-property: all;
     transition-duration: 0.6s;
     transition-timing-function: cubic-bezier(0.6,0.6,0,1);
     cursor: pointer;
     padding-left: 18px;
     padding-right: 18px;
     font-size: 14px;
-    
+    padding-right: 18px;
+    padding-left: 18px;
+
 }
 .answer-open{
-    max-height: 16px;
+    max-height: 60px;
+    padding:18px;
 }
 
 .program{
     padding-top:80px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .program-container{
     padding-top:64px;
@@ -622,26 +647,56 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:72px
+    gap:72px;
+    width: 100%;
+    margin: auto;
+    max-width: 1280px;
 }
 .program-column{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:56px;
+    gap:72px;
+    width: 100%;
 }
 .slot-details{
     display: flex;
+    margin-top: 22px;
 }
 .slot-container{
     display: flex;
     flex-direction: column;
-    gap:24px;
-    border:2px solid rgb(255,255,255,0.6);
-
+    max-width: 540px;
+    /*border:2px solid rgb(255,255,255,0.6);*/
+    border:2px solid white;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 8px var(--pink);
+    padding:12px 0px;
+}
+.column-title{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .slot-seperator{
+    height: 1px;
+    /*width: calc(100% + 2px);*/
+    width: calc(100%);
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: rgb(255,255,255,0.6);
+    /*margin-left: -1px;
+    margin-right: -1px;*/
+    margin-top:24px;
+    margin-bottom: 24px;
+    box-shadow: 0px 0px 5px 2px var(--pink);
+    /*background-color: var(--pink);*/
+    background-color: white;
+}
+.slot-before{
     height: 1px;
     width: calc(100% + 4px);
     border-width: 0px 0px 2px 0px;
@@ -649,9 +704,33 @@ footer{
     border-color: rgb(255,255,255,0.6);
     margin-left: -2px;
     margin-right: -2px;
+    margin-top:5px;
+}
+.slot-after{
+    height: 1px;
+    width: calc(100% + 4px);
+    border-width: 2px 0px 0px 0px;
+    border-style: solid;
+    border-color: rgb(255,255,255,0.6);
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-bottom: 5px;
+}
+.slot-top{
+    padding:18px 24px 12px 24px;
+}
+
+.slot-bottom{
+    padding:24px 18px 36px 18px;
 }
 .slot-detail-element{
     display: flex;
+    flex:1;
+    vertical-align: baseline;
+}
+.detail-text{
+    display: flex;
+    align-items: center;
 }
 .profile-about{
     display: flex;
@@ -676,12 +755,17 @@ footer{
     padding: 4px;
     width: 96px;
     height: 96px;
-    border: 1px solid #E6EBF5;
+    /*border: 1px solid #E6EBF5;*/
+    border: 2px solid white;
     border-radius: 134px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 0px 20px 8px var(--pink);
+}
+.profile-about{
+    margin-top:18px;
 }
 .profile-card{
     display: flex;
@@ -736,7 +820,7 @@ footer{
         font-size: 11px;
     }
     .answer-open{
-        max-height: 150px;
+        max-height: 70px;
     }
     .team-table{
         flex-direction: row;
@@ -791,7 +875,7 @@ footer{
         font-size: 11px;
     }
     .answer-open{
-        max-height: 160px;
+        max-height: 100px;
     }
     .card-container{
         max-width: 240px;
@@ -950,7 +1034,7 @@ footer{
         font-size: 10px;
     }
     .answer-open{
-        max-height: 180px;
+        max-height: 120px;
     }
     .landing-title {
         font-size: 42px;
