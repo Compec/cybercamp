@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 * {
     box-sizing: border-box;
-    font-family: 'Helvetica';
+    font-family: 'Inter';
     padding: 0;
     margin: 0;
     outline: none;
 }
+
+
 
 :root {
     --purple:rgb(105, 7, 89);
@@ -14,14 +17,17 @@
     --dark-blue:rgb(0, 7, 34);
     --nav-color: rgba(0,0,0,0.8);
 }
-body.landing {
+body{
+    padding-top:80px;
+}
+body.landing-body {
     
     background: linear-gradient(-45deg, var(--pink),var(--pink),var(--dark-blue),var(--purple),var(--blue),var(--blue));
 	background-size: 2000% 2000%;
 	animation: gradient 16s ease infinite;
 
 }
-body.others{
+body.others-body{
     background: linear-gradient(125deg, rgb(35, 4, 25) 0%, rgb(20, 2, 15) 100%);
 }
 @keyframes gradient {
@@ -46,6 +52,10 @@ body.others{
     color: white;
     border:3px solid white;
     box-shadow: 0px 0px 10px 6px var(--pink);
+}
+
+.footer-container{
+    padding:24px 48px;
 }
 
 .nav-link {
@@ -109,7 +119,7 @@ body.others{
 .landing {
     position: relative;
     min-height: calc(100vh - 80px);
-    padding-top: 80px;
+    
     background: none;
     
 }
@@ -144,7 +154,7 @@ body.others{
     bottom: 0;
     z-index: 2;
     color: white;
-    padding: 30px;
+    padding: 54px;
     align-items: center;
     height: 100%;
 }
@@ -155,10 +165,6 @@ body.others{
     height: 100%;
 }
 
-.landing-icon-container {
-    flex-basis: 40%;
-    height: 100%;
-}
 
 .landing-title-container {
     width: 100%;
@@ -166,8 +172,11 @@ body.others{
 .landing-icon-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /*justify-content: space-evenly;*/
     align-items: center;
+    flex-basis: 40%;
+    height: 100%;
+    gap:32px;
 }
 .landing-icon {
     width: 360px;
@@ -177,6 +186,7 @@ body.others{
 
 .landing-text {
     min-width: 24px;
+    margin-top:40px;
 }
 
 .landing-title {
@@ -276,6 +286,8 @@ footer{
     justify-content: space-between;
     align-items: stretch;
     border-radius: 48px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .about-column{
     border-style: solid;
@@ -284,17 +296,13 @@ footer{
     flex-shrink: 1;
     flex-grow: 1;
     flex-basis: 0;
-    padding: 12px 18px 12px 18px;
+    padding: 32px 16px 12px 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 .about-column:last-child{
     border-width: 0;
-    padding-bottom: 32px;
-}
-.about-column:first-child{
-    padding-top: 32px;
 }
 
 .about-column p {
@@ -319,7 +327,9 @@ footer{
     padding: 0 2px;
 
 }
-
+.about-title{
+    margin-bottom:16px;
+}
 .number-tag {
 
 
@@ -333,6 +343,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom:16px;
 
 }
 
@@ -691,6 +702,13 @@ footer{
 }
 
 @media screen and (max-width: 991px) {
+    .landing-container{
+        padding-top: 30px;
+        padding-right: 16px;
+    }
+    .landing-icon-container{
+        flex-basis: 60%;
+    }
     .mail-form-input-button{
         height:48px;
     }
@@ -740,6 +758,9 @@ footer{
 }
 
 @media screen and (max-width: 767px) {
+    .footer-img-container{
+        width: 180px;
+    }
     .mail-form-input-button{
         height:36px;
     }
@@ -777,25 +798,45 @@ footer{
     }
     .about-table{
         flex-direction: column;
+        padding-right: 0px;
+        padding-left: 0px;
     }
     .about-column{
         border-width: 0px 0px 2px 0px;
+        padding-right: 24px;
+        padding-left: 24px;
+        padding-top:20px;
+    }
+    .about-column:first-child{
+        padding-top:30px;
+    }
+    .about-column:last-child{
+        padding-bottom:24px;
     }
     .landing-text {
-        font-size: 16px;
+        font-size: 18px;
+        margin-top:24px;
     }
     .landing-title {
         font-size: 72px;
     }
     .landing-container {
         flex-direction: column;
+        padding-right: 24px;
+        padding-left: 24px;
     }
-
-    .landing-icon-container {
+    #compec-icon{
         display: none;
+    }
+    .landing-icon-container {
+        /*
+        display: none;
+        */
+        margin-top:36px;
     }
     .landing-icon {
         max-height: 100%;
+        width: 270px;
     }
 
     .nav-buttons-container {
@@ -815,7 +856,7 @@ footer{
     }
 
     .landing-register-container {
-        margin-top: 96px;
+        margin-top: 36px;
     }
 
     .nav-bar {
@@ -842,6 +883,8 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        padding-right: 16px;
+        padding-left: 16px;
     }
     .close-hamburger-container {
         font-size: 24px;
@@ -868,6 +911,13 @@ footer{
 }
 
 @media screen and (max-width: 479px) {
+    .footer-container{
+        padding:12px 24px;
+    }
+    .about-column{
+        padding-right: 12px;
+        padding-left: 12px;
+    }
     .mail-form-input-button{
         height:24px;
     }
@@ -906,11 +956,11 @@ footer{
         font-size: 42px;
     }
     .landing-container {
-        padding: 8px;
+        padding: 20px 8px 8px 8px;
         text-align: center;
     }
     .landing-text {
-        margin-top: 42px;
+        margin-top: 30px;
     }
 
     .landing-register-container {
@@ -922,6 +972,14 @@ footer{
     }
     .person-container{
         min-width: 180px;
+    }
+    .about-container{
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    .team-container{
+        padding-right: 48px;
+        padding-left: 48px;
     }
 }
 
