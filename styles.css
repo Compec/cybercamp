@@ -16,11 +16,11 @@
     --blue:rgb(0, 22, 103);
     --dark-blue:rgb(0, 7, 34);
     --nav-color: rgba(0,0,0,0.8);
+    
 }
 body{
     padding-top:80px;
-    background: red;
-    background-color: red;
+    
 }
 body.landing-body {
     
@@ -30,6 +30,7 @@ body.landing-body {
 
 }
 body.others-body{
+    /*background: linear-gradient(125deg, rgb(35, 4, 25) 0%, rgb(20, 2, 15) 100%);*/
     background: linear-gradient(125deg, rgb(35, 4, 25) 0%, rgb(20, 2, 15) 100%);
 }
 @keyframes gradient {
@@ -48,11 +49,12 @@ body.others-body{
     box-sizing: content-box;
     transition-property: all;
     transition-duration: 0.3s;
+    border: 2px solid white;
 }
 .pink-neon:hover{
     background-color: var(--pink);
     color: white;
-    border:3px solid white;
+    border:2px solid white;
     box-shadow: 0px 0px 10px 6px var(--pink);
     transform: scale(1.1);
 }
@@ -229,7 +231,7 @@ body.others-body{
     background-color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
     text-decoration: none;
     color: var(--pink);
     font-weight: 600;
@@ -238,6 +240,8 @@ body.others-body{
     transition-duration: 0.3s;
     /*transition: all 0.1s;*/
     box-sizing: content-box;
+    padding-top:16px;
+    padding-bottom: 16px;
 }
 .landing-register-btn:hover {
     /*
@@ -510,7 +514,7 @@ footer{
 }
 
 .mail-form-input-button{
-    
+    border:2px solid white;
     width: 20%;
     height: 54px;
     border-radius: 999px;
@@ -526,16 +530,16 @@ footer{
 }
 .blue-neon{
     color:var(--light-blue);
-    box-sizing: content-box;
+    box-sizing: border-box;
     transition-property: all;
     transition-duration: 0.3s;
 }
 .blue-neon:hover{
     background-color: var(--light-blue);
     color: white;
-    border:3px solid white;
+    border:2px solid white;
     box-shadow: 0px 0px 10px 6px var(--light-blue);
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
 }
 
 .mail-form-input-box{
@@ -551,7 +555,7 @@ footer{
 }
 .mail-form-input-box:focus{
     box-shadow: 0px 0px 10px 6px var(--light-blue);
-    border: 2px solid var(--light-blue);
+    /*border: 2px solid var(--light-blue);*/
 }
 .input-button-container{
     display: flex;
@@ -573,7 +577,11 @@ footer{
     padding-top:80px;
     color: white;
 }
-
+.faq-title{
+    text-align: center;
+    font-size: 42px;
+    color:var(--light-blue);
+}
 .faq-container{
     width: 100%;
     padding:36px;
@@ -585,11 +593,12 @@ footer{
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 24px 0px;
+    margin: 24px 0px;
     /*gap: 24px;*/
-    border-radius: 30px;
+    border-radius: 16px;
     overflow: hidden;
     /*background-color: #310031;*/
+    box-shadow: 0px 0px 10px 6px var(--pink);
 }
 .faq-seperator{
     width: 100%;
@@ -602,21 +611,23 @@ footer{
     overflow: hidden;
 }
 .faq-q{
-    background-color: #310031;
+    /*background-color: #310031;*/
     cursor: pointer;
     font-size: 18px;
     height: max-content;
     overflow: hidden;
     padding:18px;
+
+    font-weight: 600;
 }
-.faq-card:first-child{
-    border-radius: 30px 30px 0px 0px;
+/*.faq-card:first-child{
+    border-radius: 20px 20px 0px 0px;
 }
 .faq-card:last-child{
-    border-radius: 0px 0px 30px 30px;
-}
+    border-radius: 0px 0px 20px 20px;
+}*/
 .faq-a{
-    background-color: #6b163c;
+    background-color: var(--dark-blue);
     max-height: 0px;
     transition-property: all;
     transition-duration: 0.6s;
@@ -627,10 +638,13 @@ footer{
     font-size: 14px;
     padding-right: 18px;
     padding-left: 18px;
-
+    /*box-shadow: 0px 0px 10px 1px var(--pink) inset;*/
+}
+.faq-a a{
+    color:var(--pink);
 }
 .answer-open{
-    max-height: 60px;
+    max-height: 80px;
     padding:18px;
 }
 
@@ -640,6 +654,16 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.program-title{
+    font-size:28px;
+    text-align: center;
+    padding:0px 12px;
+}
+.program-main-title{
+    font-size:36px;
+    text-align: center;
+    padding:0px 16px;
 }
 .program-container{
     padding-top:64px;
@@ -658,8 +682,14 @@ footer{
     justify-content: center;
     align-items: center;
     gap:72px;
-    width: 100%;
+    width: 80%;
+    padding:90px 0px;
+    /*background: linear-gradient(125deg, #2e0521 0%, #170211 100%);*/
+    border-radius: 16px;
+    /*box-shadow: 0px 0px 10px 6px var(--pink);*/
 }
+
+
 .slot-details{
     display: flex;
     margin-top: 22px;
@@ -842,6 +872,12 @@ footer{
 }
 
 @media screen and (max-width: 767px) {
+    .program-title{
+        font-size:20px;
+    }
+    .program-main-title{
+        font-size:24px;
+    }
     .footer-img-container{
         width: 180px;
     }
@@ -995,6 +1031,9 @@ footer{
 }
 
 @media screen and (max-width: 479px) {
+    .faq-title{
+        font-size:24px;
+    }
     .footer-container{
         padding:12px 24px;
     }
@@ -1014,8 +1053,8 @@ footer{
     }
     .mail-form{
         /*gap:12px;*/
-        padding-left: 32px;
-        padding-right: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .mail-form-input-box{
         height:24px;
