@@ -1114,6 +1114,12 @@ footer{
         padding-right: 24px;
         padding-left: 24px;
     }
+    .about-table{
+        border-radius: 20px;
+    }
+    .about-column{
+        padding-bottom: 18px;
+    }
     .team-container{
         padding-right: 48px;
         padding-left: 48px;
