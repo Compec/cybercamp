@@ -169,7 +169,7 @@ body.others-body{
     bottom: 0;
     z-index: 2;
     color: white;
-    padding: 54px;
+    padding: 128px 40px;
     align-items: center;
     height: 100%;
 }
@@ -202,6 +202,9 @@ body.others-body{
 .landing-text {
     min-width: 24px;
     margin-top:40px;
+    font-size:18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
 }
 
 .landing-title {
@@ -213,12 +216,13 @@ body.others-body{
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 80px;
+    /*justify-content: center;*/
+    margin-top: 48px;
 }
 .landing-register-link {
-    width: 200px;
-    height: 60px;
+    /*width: 200px;*/
+    /*padding: 0px 40px;*/
+    /*height: 48px;*/
     background-color: white;
     text-decoration: none;
     border-radius: 300px;
@@ -226,8 +230,8 @@ body.others-body{
 }
 
 .landing-register-btn {
-    width: 200px;
-    height: 60px;
+    /*width: 200px;
+    height: 60px;*/
     background-color: white;
     display: flex;
     justify-content: center;
@@ -240,8 +244,10 @@ body.others-body{
     transition-duration: 0.3s;
     /*transition: all 0.1s;*/
     box-sizing: content-box;
-    padding-top:16px;
-    padding-bottom: 16px;
+    padding-top:12px;
+    padding-bottom: 12px;
+    padding-right: 40px;
+    padding-left: 40px;
 }
 .landing-register-btn:hover {
     /*
@@ -377,6 +383,7 @@ footer{
     text-align:center;
     font-size: 24px; 
     line-height: 24px;
+    letter-spacing: -0.02em;
 }
 
 .team{
@@ -452,14 +459,18 @@ footer{
 }
 .contact-image-container{
     margin:18px 12px 18px 12px;
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
 }
 
 .contact-image{
     width: 100%;
     height: 100%x;
-
+    transition-property: opacity;
+    transition-duration: 100ms;
+}
+.contact-image:hover{
+    opacity: 0.6;
 }
 
 .mail-list{
@@ -484,7 +495,7 @@ footer{
 }
 .mail-icon{
     width: 100%;
-    opacity: 0.9;
+    /*opacity: 0.9;*/
 }
 
 .mail-list-title{
@@ -586,10 +597,14 @@ footer{
 }
 .faq-container{
     width: 100%;
-    padding:36px;
+    padding:40px;
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    gap:36px;
+    margin: auto;
 }
 .faq-accordion{
     display: flex;
@@ -615,12 +630,22 @@ footer{
 .faq-q{
     /*background-color: #310031;*/
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     height: max-content;
     overflow: hidden;
     padding:18px;
-
+    display: flex;
     font-weight: 600;
+}
+.faq-toggle-icon{
+    margin-left: auto;
+    margin-right: 18px;
+    transition-property: all;
+    transition-duration: 0.4s;
+    object-fit: contain;
+}
+.faq-toggled-icon{
+    transform:rotate(180deg);
 }
 /*.faq-card:first-child{
     border-radius: 20px 20px 0px 0px;
@@ -637,16 +662,17 @@ footer{
     cursor: pointer;
     padding-left: 18px;
     padding-right: 18px;
-    font-size: 14px;
+    font-size: 18px;
     padding-right: 18px;
     padding-left: 18px;
     /*box-shadow: 0px 0px 10px 1px var(--pink) inset;*/
+    letter-spacing: -0.02em;
 }
 .faq-a a{
     color:#f7bbe4;
 }
 .answer-open{
-    max-height: 80px;
+    max-height: 105px;
     padding:18px;
 }
 
@@ -776,6 +802,20 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size:12px;
+}
+.profile-name{
+    font-size:16px;
+    font-weight: 500;
+}
+.position{
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+.company{
+    font-weight: 400;
 }
 .profile-image{
     width: 100%;
@@ -819,6 +859,9 @@ footer{
 }
 
 @media screen and (max-width: 991px) {
+    .faq-toggle-icon{
+        margin-right: 15px;
+    }
     .mail-form p{
         margin-top:16px;
         margin-bottom: 16px;
@@ -851,13 +894,13 @@ footer{
         padding: 30px;
     }
     .faq-q{
-        font-size: 15px;
+        font-size: 20px;
     }
     .faq-a{
-        font-size: 11px;
+        font-size: 18px;
     }
     .answer-open{
-        max-height: 70px;
+        max-height: 125px;
     }
     .team-table{
         flex-direction: row;
@@ -879,6 +922,9 @@ footer{
 }
 
 @media screen and (max-width: 767px) {
+    .faq-toggle-icon{
+        margin-right: 12px;
+    }
     .program-title h1{
         font-size:24px;
     }
@@ -912,13 +958,13 @@ footer{
         padding:24px;
     }
     .faq-q{
-        font-size: 15px;
+        font-size: 18px;
     }
     .faq-a{
-        font-size: 11px;
+        font-size: 16px;
     }
     .answer-open{
-        max-height: 100px;
+        max-height: 160px;
     }
     .card-container{
         max-width: 240px;
@@ -930,15 +976,7 @@ footer{
     }
     .about-column{
         border-width: 0px 0px 2px 0px;
-        padding-right: 24px;
-        padding-left: 24px;
-        padding-top:20px;
-    }
-    .about-column:first-child{
-        padding-top:30px;
-    }
-    .about-column:last-child{
-        padding-bottom:24px;
+        padding:24px;
     }
     .landing-text {
         font-size: 18px;
@@ -949,8 +987,7 @@ footer{
     }
     .landing-container {
         flex-direction: column;
-        padding-right: 24px;
-        padding-left: 24px;
+        padding:48px 40px 24px;
     }
     #compec-icon{
         display: none;
@@ -963,7 +1000,7 @@ footer{
     }
     .landing-icon {
         max-height: 100%;
-        width: 270px;
+        width: 180px;
     }
 
     .nav-buttons-container {
@@ -983,7 +1020,8 @@ footer{
     }
 
     .landing-register-container {
-        margin-top: 36px;
+        margin-top: 40px;
+
     }
 
     .nav-bar {
@@ -1037,6 +1075,9 @@ footer{
     }
 }
 @media screen and (max-width: 570px){
+    .faq-toggle-icon{
+        margin-right: 6px;
+    }
     .mail-form-input-button{
         height:30px;
     }
@@ -1061,6 +1102,9 @@ footer{
     }
 }
 @media screen and (max-width: 479px) {
+    .faq-toggle-icon{
+        margin-right: 0px;
+    }
     .mail-list-container{
         padding-left: 24px;
         padding-right: 24px;
@@ -1073,35 +1117,43 @@ footer{
         padding:12px 24px;
     }
     .about-column{
-        padding-right: 12px;
-        padding-left: 12px;
+        padding: 16px 24px;
+        
     }
-    
     .faq-container{
         padding:16px;
     }
     .faq-q{
-        font-size: 14px;
+        font-size: 16px;
     }
     .faq-a{
-        font-size: 10px;
+        font-size: 14px;
     }
     .answer-open{
-        max-height: 120px;
+        max-height: 200px;
     }
     .landing-title {
         font-size: 42px;
     }
     .landing-container {
-        padding: 20px 8px 8px 8px;
+        padding: 64px 12px 0px;
         text-align: center;
     }
+    .landing-content-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .landing-icon-container{
+        margin-top:24px;
+    }
     .landing-text {
-        margin-top: 30px;
+        margin-top: 16px;
+        font-size: 16px;
     }
 
     .landing-register-container {
-        margin-top: 32px;
+        justify-content: center;
+        margin-top: 24px;
     }
     .person-image-container{
         width: 84px;
@@ -1117,13 +1169,19 @@ footer{
     .about-table{
         border-radius: 20px;
     }
-    .about-column{
-        padding-bottom: 18px;
-    }
+    
     .team-container{
         padding-right: 48px;
         padding-left: 48px;
     }
 }
 
-
+@media screen and (max-width: 370px) {
+    .landing-icon-container{
+        display: none;
+    }
+    .landing-text{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
